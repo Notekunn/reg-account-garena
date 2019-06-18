@@ -3,7 +3,6 @@ const utils = require("./utils");
 const fs = require("fs");
 const accounts = require("./account.json");
 const chalk = require("chalk");
-
 async function doTask() {
     try {
         const captchaKey = utils.createRandomHash(18);
@@ -11,8 +10,9 @@ async function doTask() {
         const captchaImage = await utils.getCaptcha(captchaKey);
 
         fs.writeFileSync("./public/captcha.png", captchaImage);
-
-        const captcha = readlineSync.question(chalk.red("Nhap captcha: "));
+       
+        // const captcha = readlineSync.question(chalk.red("Nhap captcha: "));
+        const captcha = await utils.sloveCaptcha();
 
         const username = utils.createRandomUserName("clonebmn");
 

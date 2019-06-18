@@ -10,10 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "base64-img": "^1.0.4",
     "chalk": "^2.4.2",
     "express": "^4.17.1",
-    "readline-sync": "^1.4.9",
-    "request": "^2.88.0",
-    "request-promise": "^4.2.4"
+    "readline-sync": "^1.4.9"
   }
 }

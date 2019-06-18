@@ -1,10 +1,9 @@
 #### HDSD:
 
 ```
-node app
+npm install
 node index
 ```
-
-- Mở localhost/captcha.png để xem captcha
+- Chỉnh AZ captcha key ở utils.js
 - Account lưu tại account.json
 - Mật khẩu là `cuongdeptrai@123`
