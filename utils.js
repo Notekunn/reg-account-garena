@@ -67,8 +67,10 @@ const sloveCaptcha = async function() {
         };
 
         let solve = await request(options);
-        console.log(solve);
-        if(solve.status == 0) return undefined;
+        if(solve.status == 0) {
+            console.log(solve.request);
+            return undefined;
+        }
         let captcha = await getResult(solve.request);
         console.log("Captcha: " + captcha);
         return captcha;

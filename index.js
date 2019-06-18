@@ -10,9 +10,8 @@ async function doTask() {
         const captchaImage = await utils.getCaptcha(captchaKey);
 
         fs.writeFileSync("./public/captcha.png", captchaImage);
-       
-        // const captcha = readlineSync.question(chalk.red("Nhap captcha: "));
-        const captcha = await utils.sloveCaptcha();
+        
+        const captcha = (await utils.sloveCaptcha()) || readlineSync.question(chalk.red("Nhap captcha: "));
 
         const username = utils.createRandomUserName("clonebmn");
 
@@ -20,7 +19,7 @@ async function doTask() {
         if (result && !result.error) {
             accounts.push({
                 username,
-                password: "cuongdeptrai@123",//khong thay pass dc
+                password: "cuongdeptrai@123", //khong thay pass dc
                 uid: result.uid
             });
             fs.writeFileSync("./account.json", JSON.stringify(accounts, null, "\t"));
