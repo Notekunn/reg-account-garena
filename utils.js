@@ -15,14 +15,14 @@ const getCaptcha = (key) => {
         encoding: null
     })
 }
-const createRandomUserName = (seed) => seed + (++totalUser);
+const javqc001 = (seed) => seed + (++totalUser);
 const register = ({ username, captcha, captcha_key }) => {
     return request.post({
         url: `${SSO_URL}/register`,
         form: {
             username,
             email: "",
-            password: ecryptPassword,
+            password: Chinh123@,
             location: "VN",
             redirect_uri: REDIRECT_URL,
             captcha_key,
