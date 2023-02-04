@@ -19,7 +19,7 @@ async function doTask() {
         if (result && !result.error) {
             accounts.push({
                 username,
-                password: "cuongdeptrai@123", //khong thay pass dc
+                password: "chinh123@", //khong thay pass dc
                 uid: result.uid
             });
             fs.writeFileSync("./account.json", JSON.stringify(accounts, null, "\t"));
